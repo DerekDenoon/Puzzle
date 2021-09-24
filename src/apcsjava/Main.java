@@ -15,14 +15,17 @@ public class Main {
         // outputs the first 20 rows of the triangle
         System.out.println("First 20 Rows: ");
         for (int i = 1;i < 21; i++){
-            System.out.println(RowGeneration.generateRow(i));
+            System.out.println(RowGeneration.generateRow(i,1));
         }
 
         // takes in user input n and outputs row n
         int toGenerate;
+        int skip;
         System.out.println("What row number would you like to know: ");
         toGenerate = input.nextInt();
-        System.out.println(RowGeneration.generateRow(toGenerate));
+        System.out.println("What would you like to set the skip to? ");
+        skip = input.nextInt();
+        System.out.println(RowGeneration.generateRow(toGenerate,skip));
 
 
 

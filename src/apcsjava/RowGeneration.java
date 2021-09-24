@@ -12,7 +12,7 @@ import java.util.HashMap;
 
 public class RowGeneration {
 
-    public static ArrayList<Integer> generateRow(int n){
+    public static ArrayList<Integer> generateRow(int n,int skip){
         // hashmap to check if boxes are filled 0 is empty and 1 is full (all boxes are empty to start)
         HashMap<Integer,Integer> fillCheck = new HashMap<>();
         for(int i = 1; i <= n;i++){
@@ -34,7 +34,7 @@ public class RowGeneration {
         int lastEntry = 1;
         for (int i = 0; i < n-1;i++){
             // finds the position of the next variable
-            int indexToInsert = nextPositionExpanded(fillCheck,lastEntry,1,n);
+            int indexToInsert = nextPositionExpanded(fillCheck,lastEntry,skip,n);
             // inserts the variable
             builder.put(
                     indexToInsert,
